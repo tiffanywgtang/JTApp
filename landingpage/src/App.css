@@ -1,0 +1,100 @@
+@font-face{
+    font-family:"spaceSmall";
+    font-style:normal;
+    font-weight:200;
+    src:url("font/fontSmall.ttf");
+    src:local('spaceSmall'), local('spaceSmall'),url("font/fontSmall.ttf") format(
+    'truetype');
+}
+@font-face{
+    font-family:"spaceBig";
+    font-style:normal;
+    font-weight:200;
+    src:url("font/fontBig.ttf");
+    src:local('spaceBig'), local('spaceBig'),url("font/fontBig.ttf") format(
+    'truetype');
+}
+body {
+  
+  background: url("img/background.jpg") no-repeat center center;
+  /*margin: 0;
+    padding: 0;
+    color: white;
+    background-color: white;
+    background: url(backgroung.jpg) no-repeat center center;
+    background: linear-gradient(to bottom right, lightblue, lightgreen);
+    background-size: cover;*/
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.background {
+  background: linear-gradient(to bottom right, lightblue, lightgreen);
+}
+
+.logo {
+  margin-top: 40px;
+  width:400px;
+}
+
+.blue {
+  color: rgb(116, 228, 255);
+}
+
+.green {
+  background-color: lightgreen;
+}
+
+.parag {
+    font-family: "spaceSmall";
+  text-align: left;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+/*  margin-bottom: 500px;*/
+  color:white;
+}
+
+.title {
+  margin-top: 30px;
+    color: white;
+    font-size: 45pt;
+    font-family: 'spaceBig';
+}
+
+.bLaunch {
+    text-align: center;
+    margin-top: 50px;
+    height: 60px;
+    width: 300px;
+   margin-bottom: 100px;
+}
+
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
