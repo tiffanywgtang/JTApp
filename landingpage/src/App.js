@@ -2,13 +2,30 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import logo from './img/grouplogo.png'
 import './App.css';
+import ChatPage from './comp/ChatPage.js'
 
 class App extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            currentPage:0
+        }
+        this.changePage=this.changePage.bind(this);
+    }
+    
+    changePage(){
+        this.setState({
+            currentPage:1
+        })
+    }
+    
   render() {
-    return (
-        
-       <div className="App">
-        <h1 className="title">Juliana and Tiffany's App</h1>
+      var comp=null;
+      
+      if(this.state.currentPage === 0){
+          comp = (
+              <div>
+          <h1 className="title">Juliana and Tiffany's App</h1>
         <Container> 
         <Row>
           <Col>
@@ -25,7 +42,19 @@ class App extends Component {
           </Col>
         </Row>
         </Container>
-        <button className="btn btn-outline-info bLaunch">Launch website</button>
+        <button className="btn btn-outline-info bLaunch" onClick={this.changePage}>Start Chat!</button>
+          </div>
+          )
+      }
+      else if(this.currentPage === 1){
+          comp=(<ChatPage/>);
+      }
+      
+      
+    return (
+        
+       <div className="App">
+        {comp}
   </div>  
     );
   }
