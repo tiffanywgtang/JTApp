@@ -1,0 +1,108 @@
+.chatApp {
+    text-align: center;
+}
+.onlineusers{
+    top:0;
+    left: 0;
+    width: 20vw;
+    height: 100vh;
+    padding:10px;
+    font-size: 10pt;
+    background-color: mediumturquoise;
+    color: white;
+    font-weight: 500;
+    font-size: 15pt;
+}
+.joinBox {
+    width: 85vw;
+    bottom: 50vh;
+    position: fixed;
+    right: 0;
+}
+
+.joinBtn {
+    width: 100px;
+    color: darkturquoise;
+    border-radius: 11px; 
+    -moz-border-radius: 11px; 
+    -webkit-border-radius: 11px; 
+    border: 3px groove #40D1DB;
+    cursor: pointer;
+    position: absolute;
+    outline:none !important;
+}
+
+.joinBtn:hover {
+    opacity: 0.7;
+}
+
+.joinBtn:active {
+    box-shadow: 0 3px 0 #27878E;
+    top: 3px;
+}
+
+.userLogin {
+    color: #4D2291;
+    border: 3px groove #40D1DB;
+    outline: none;
+}
+
+.sendBtn {
+    width: 100px;
+    color: rebeccapurple;
+    border-radius: 11px; 
+    -moz-border-radius: 11px; 
+    -webkit-border-radius: 11px; 
+    border: 3px groove #6E42B5;
+    cursor: pointer;
+    position: absolute;
+    outline:none !important;
+    
+}
+
+.sendBtn:hover {
+    opacity: 0.7;
+}
+.sendBtn:active {
+    box-shadow: 0 3px 0 #6E42B5;
+    top: 3px;
+}
+
+.chatDisplay {
+    width: 80vw;
+    right: 0;
+    bottom: 12vh;
+    position: fixed;
+    color: #FFF;
+    background-color:#290F54 ;
+     border-radius: 8px; 
+    -moz-border-radius: 8px; 
+    -webkit-border-radius: 8px; 
+    border: 3px  #6E42B5;
+    text-align: left;
+    padding: 2%;
+    background: rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+    
+}
+
+.userMsg {
+    color: #6E42B5;
+    border: 3px groove #6E42B5;
+    outline: none;
+    width: 65vw;
+}
+
+
+.controls {
+    position: fixed;
+    bottom: 5vh;
+    width: 85vw; 
+    right: 0;
+}
+
+.singleMsg {
+    
+}
