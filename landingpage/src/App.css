@@ -30,58 +30,49 @@ body {
 .App {
     
   background: url("img/space-bg.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
-
 .logo {
-  margin-top: 40px;
-  width:400px;
+  width:150px;
+}
+
+.title {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  color: white;
+  font-size: 45pt;
+  font-family: 'spaceBig';
 }
 
 .blue {
-    font-family: "spaceSmall";
-    text-align: left;
-    margin-top: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
-    text-transform: uppercase;
-    color: #25BBC4;
-}
+  font-family: "spaceSmall";
+  text-align: left;
+  text-transform: uppercase;
+  color: #25BBC4;
+  }
 
 .green {
   background-color: lightgreen;
 }
 
 .parag {
-    font-family: "spaceSmall";
-    text-align: left;
-    margin-top: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
-
+  font-family: "spaceSmall";
+  font-size: 11pt;
+  text-align: left;
+  margin-top: 30px;
+  padding-left: -30px;
+  padding-right: -30px;
   color:white;
 }
 
-
-.title {
-  margin-top: 30px;
-    color: white;
-    font-size: 45pt;
-    font-family: 'spaceBig';
-}
-
 .bLaunch {
-    text-align: center;
-    margin-top: 50px;
-    height: 60px;
-    width: 300px;
-    margin-bottom: 100px;
-    font-family:'spaceSmall';
-    
+  text-align: center;
+  margin-top: 50px;
+  height: 60px;
+  width: 300px;
+  margin-bottom: 100px;
+  font-family:'spaceSmall';
 }
-
-
