@@ -17,7 +17,6 @@
 
 body {
   
-
   /*margin: 0;
     padding: 0;
     color: white;
@@ -28,7 +27,6 @@ body {
 }
 
 .App {
-    
   background: url("img/space-bg.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -49,9 +47,11 @@ body {
 
 .blue {
   font-family: "spaceSmall";
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
   color: #25BBC4;
+  font-size: 18pt;
+  margin-bottom: 50px;
   }
 
 .green {
@@ -62,9 +62,6 @@ body {
   font-family: "spaceSmall";
   font-size: 11pt;
   text-align: left;
-  margin-top: 30px;
-  padding-left: -30px;
-  padding-right: -30px;
   color:white;
 }
 
@@ -75,4 +72,8 @@ body {
   width: 300px;
   margin-bottom: 100px;
   font-family:'spaceSmall';
+}
+
+img {
+  margin: 30px;
 }
