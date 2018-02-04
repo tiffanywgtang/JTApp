@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import './css/chatPage.css';
 import mySocket from 'socket.io-client';
+import a1 from './img/a1.svg';
+import a2 from './img/a2.svg';
+import a3 from './img/a3.svg';
+import a4 from './img/a4.svg';
+import a5 from './img/a5.svg';
 
 class ChatPage extends Component {
      constructor(props){
@@ -56,9 +61,7 @@ class ChatPage extends Component {
     
     sendMsg(){
         var msg = this.state.username+ ": "+this.state.msg;
-        this.socket.emit("msg", msg);
-        
-        
+        this.socket.emit("msg", msg);          
     }
     
     
@@ -74,6 +77,14 @@ class ChatPage extends Component {
                 <div className="joinBox">
                     <input className="userLogin" type="text" placeholder="Type in username" onChange={this.saveName} />
                     <button className="joinBtn" onClick={this.joinChat}>Join</button>
+                <div className="avatarBox">
+                    <p className="aText">Choose your avatar:</p>
+                    <img src={a1} alt="a1" className="avatar"/>
+                    <img src={a2} alt="a2" className="avatar"/>
+                    <img src={a3} alt="a3" className="avatar"/>
+                    <img src={a4} alt="a4" className="avatar"/>
+                    <img src={a5} alt="a5" className="avatar"/>
+                </div>
                 </div>
                 </Col>
             </Row>
@@ -101,7 +112,6 @@ class ChatPage extends Component {
                 <div className="controls">  
                     <input type="text" placeholder="message" onChange={this.saveMsg} className="userMsg"/>
                     <button onClick={this.sendMsg} className="sendBtn">Send</button>
-              
                   </div>
               
               </div>

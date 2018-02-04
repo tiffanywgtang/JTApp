@@ -14,8 +14,8 @@
     font-size: 15pt;
 }
 .joinBox {
-    width: 85vw;
-    bottom: 50vh;
+    width: 90vw;
+    bottom: 35vh;
     position: fixed;
     right: 0;
 }
@@ -105,4 +105,23 @@
 
 .singleMsg {
     
+}
+
+.avatarBox {
+    margin: 0 auto;
+    position: relative;
+    margin-left: 120px;
+}
+
+.avatar {
+    max-width: 60px;
+    min-width: 30px;
+    margin-left: -2px;
+    margin-top:-10px;
+}
+
+.aText{
+    color:white;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
