@@ -1,5 +1,5 @@
 const server = require('http').Server();
-const port = 10001;
+const port = process.env.PORT || 10001;
 
 var io = require('socket.io')(server);
 
@@ -27,6 +27,7 @@ io.on("connection", function(socket){
         console.log("user has disconnected");
     })
 });
+
 
 server.listen(port,(err)=>{
     if(err){
