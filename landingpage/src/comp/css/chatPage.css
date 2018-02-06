@@ -12,6 +12,7 @@
     color: white;
     font-weight: 500;
     font-size: 15pt;
+    overflow: scroll;
 }
 .joinBox {
     width: 90vw;
@@ -73,7 +74,7 @@
     right: 0;
     bottom: 12vh;
     position: fixed;
-    color: #FFF;
+    color: #FFF;  
     background-color:#290F54 ;
      border-radius: 8px; 
     -moz-border-radius: 8px; 
@@ -85,7 +86,7 @@
     -moz-box-shadow: 0px 10px 14px -7px #276873;
 	-webkit-box-shadow: 0px 10px 14px -7px #276873;
 	box-shadow: 0px 10px 14px -7px #276873;
-    
+    overflow: scroll;
 }
 
 .userMsg {
@@ -95,6 +96,21 @@
     width: 65vw;
 }
 
+.theMSG {
+/*
+    padding:8px;
+    margin-bottom: 8px;
+    background-color:#290F54 ;
+     border-radius: 8px; 
+    -moz-border-radius: 8px; 
+    -webkit-border-radius: 8px; 
+    border: 3px  #6E42B5;
+    background: rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 10px 14px -5px #276873;
+	-webkit-box-shadow: 0px 10px 14px -5px #276873;
+	box-shadow: 0px 10px 14px -5px #276873;
+*/
+}
 
 .controls {
     position: fixed;
@@ -103,9 +119,6 @@
     right: 0;
 }
 
-.singleMsg {
-    
-}
 
 .avatarBox {
     margin: 0 auto;
@@ -118,6 +131,9 @@
     min-width: 30px;
     margin-left: -2px;
     margin-top:-10px;
+    -moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
 }
 
 .aText{

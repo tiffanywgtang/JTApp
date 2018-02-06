@@ -16,7 +16,9 @@ class ChatPage extends Component {
             username:"",
             allusers:[],
             allmsgs:[],
-            msg:""
+            msg:"",
+            avatar:"",
+            time:""
         }
         this.joinChat=this.joinChat.bind(this);
         this.saveName=this.saveName.bind(this);
@@ -24,8 +26,11 @@ class ChatPage extends Component {
         this.sendMsg=this.sendMsg.bind(this);
     }
     
-    componnentDidMount(){
-    }
+    componentDidMount() {
+ 
+    this.Clock = setInterval( () => this.GetTime(), 1000 );
+ 
+  }
     
     joinChat(){
         this.setState({
@@ -59,12 +64,59 @@ class ChatPage extends Component {
         }) 
     }
     
-    sendMsg(){
-        var msg = this.state.username+ ": "+this.state.msg;
-        this.socket.emit("msg", msg);          
+    
+    
+    
+    GetTime() {
+ 
+    var date, TimeType, hour, minutes, fullTime;
+ 
+    date = new Date();
+    hour = date.getHours(); 
+ 
+    if(hour <= 11)
+    {
+ 
+      TimeType = 'AM';
+ 
     }
+    else{
+ 
+      TimeType = 'PM';
+ 
+    }
+ 
+    if( hour > 12 )
+    {
+      hour = hour - 12;
+    } 
+    if( hour == 0 )
+    {
+        hour = 12;
+    } 
+ 
+    minutes = date.getMinutes();
+ 
+    if(minutes < 10)
+    {
+      minutes = '0' + minutes.toString();
+    
+    }
+ 
+    fullTime = hour.toString() + ':' + minutes.toString() + ':' + ' ' + TimeType.toString();
+ 
+    this.setState({
+ 
+      time: fullTime
+ 
+    })
+  }
     
     
+    sendMsg(){
+        var msg = this.state.username+" "+"("+this.state.time+")"+": " +this.state.msg;
+        this.socket.emit("msg", msg);         
+    }
   render() {
       var comp=null;
       
@@ -98,7 +150,7 @@ class ChatPage extends Component {
           
            var allmsgs = this.state.allmsgs.map((obj, i)=>{
                   return(
-                  <div key={i}>
+                  <div key={i} className="theMSG">
                       {obj}
                       </div>
                   )
