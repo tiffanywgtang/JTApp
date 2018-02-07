@@ -1,5 +1,10 @@
 .chatApp {
+    background: url("../img/space-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
+    width: 100vw;
+    height: 100vh;
 }
 .onlineusers{
     top:0;
@@ -15,18 +20,18 @@
     overflow: scroll;
 }
 .joinBox {
-    width: 90vw;
+    width: 100vw;
     bottom: 35vh;
     position: fixed;
-    right: 0;
+    left: 0;
 }
 
 .joinBtn {
     width: 100px;
     color: darkturquoise;
-    border-radius: 11px; 
-    -moz-border-radius: 11px; 
-    -webkit-border-radius: 11px; 
+    border-radius: 6px; 
+    -moz-border-radius: 6px; 
+    -webkit-border-radius: 6px; 
     border: 3px groove #40D1DB;
     cursor: pointer;
     position: absolute;
@@ -46,14 +51,15 @@
     color: #4D2291;
     border: 3px groove #40D1DB;
     outline: none;
+    margin-left: -5%;
 }
 
 .sendBtn {
     width: 100px;
     color: rebeccapurple;
-    border-radius: 11px; 
-    -moz-border-radius: 11px; 
-    -webkit-border-radius: 11px; 
+    border-radius: 6px; 
+    -moz-border-radius: 6px; 
+    -webkit-border-radius: 6px; 
     border: 3px groove #6E42B5;
     cursor: pointer;
     position: absolute;
@@ -72,13 +78,13 @@
 .chatDisplay {
     width: 80vw;
     right: 0;
-    bottom: 12vh;
+    bottom: 10vh;
     position: fixed;
     color: #FFF;  
     background-color:#290F54 ;
-     border-radius: 8px; 
-    -moz-border-radius: 8px; 
-    -webkit-border-radius: 8px; 
+     border-radius: 6px; 
+    -moz-border-radius: 6px; 
+    -webkit-border-radius: 6px; 
     border: 3px  #6E42B5;
     text-align: left;
     padding: 2%;
@@ -93,37 +99,20 @@
     color: #6E42B5;
     border: 3px groove #6E42B5;
     outline: none;
-    width: 65vw;
-}
-
-.theMSG {
-/*
-    padding:8px;
-    margin-bottom: 8px;
-    background-color:#290F54 ;
-     border-radius: 8px; 
-    -moz-border-radius: 8px; 
-    -webkit-border-radius: 8px; 
-    border: 3px  #6E42B5;
-    background: rgba(0,0,0,0.6);
-    -moz-box-shadow: 0px 10px 14px -5px #276873;
-	-webkit-box-shadow: 0px 10px 14px -5px #276873;
-	box-shadow: 0px 10px 14px -5px #276873;
-*/
+    width: 70vw;
 }
 
 .controls {
     position: fixed;
-    bottom: 5vh;
-    width: 85vw; 
+    bottom: 3vh;
+    width: 90vw; 
     right: 0;
 }
-
 
 .avatarBox {
     margin: 0 auto;
     position: relative;
-    margin-left: 120px;
+   
 }
 
 .avatar {
@@ -140,4 +129,40 @@
     color:white;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.leaveBtn {
+    position: fixed;
+    left: 5vw;
+    bottom: 5vh;
+    color: rebeccapurple;
+    border-radius: 6px; 
+    -moz-border-radius: 6px; 
+    -webkit-border-radius: 6px; 
+    border: 5px groove #6E42B5;
+    cursor: pointer;
+    position: absolute;
+    outline:none !important;
+}
+.leaveBtn:hover {
+    background: rgba(255,255,255,0.7);
+}
+.leaveBtn:active {
+    box-shadow: 0 3px 0 #6E42B5;
+    bottom: 2vh;
+}
+.exit {
+    height: 25px;
+    width: 25px;
+    left: 2vw;
+    top: 2vh;
+    position: fixed;
+    margin: 0 auto;
+}
+
+.exit:hover{
+    background-image: url('../img/exit.svg');
+    position: fixed;
+    width: 30px;
+    height: 30px;
 }

@@ -4,7 +4,7 @@ import './App.css';
 import logo from './img/grouplogo.png';
 import jImg from './img/ju.svg';
 import tImg from './img/tiff.svg';
-import ChatPage from './comp/ChatPage';
+import ChoosePage from './comp/ChoosePage';
 
 class App extends Component {
     constructor(props){
@@ -50,14 +50,14 @@ class App extends Component {
               
         </Row>
               
-            <button className="btn btn-outline-info bLaunch" onClick={this.changePage.bind(this,1)}>Start Chat!</button>
+            <button className="btn btn-outline-info bLaunch" onClick={this.changePage.bind(this,1)}>Enter Space!</button>
        </Container>
           </div>
           )
       }
       else if(this.state.currentPage === 1){
           comp=(
-              <ChatPage />
+              <ChoosePage />
           );
       }
       

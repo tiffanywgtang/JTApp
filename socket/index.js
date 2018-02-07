@@ -12,7 +12,6 @@ io.on("connection", function(socket){
     socket.on("uName", function(data){
         console.log("username sent = " +data);
         names.push(data);
-        
         io.emit("names", names);
         
     });
@@ -24,10 +23,12 @@ io.on("connection", function(socket){
     });
     
     socket.on("disconnect", function(){
+        var index = names.indexOf(socket.id);
+        names.splice(index, 1);
+        io.emit("names", names);
         console.log("user has disconnected");
     })
 });
-
 
 server.listen(port,(err)=>{
     if(err){

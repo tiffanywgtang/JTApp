@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import './css/chatPage.css';
 import mySocket from 'socket.io-client';
+import ChoosePage from './ChoosePage';
 import a1 from './img/a1.svg';
 import a2 from './img/a2.svg';
 import a3 from './img/a3.svg';
 import a4 from './img/a4.svg';
 import a5 from './img/a5.svg';
+import exit from './img/arrow.svg';
 
 class ChatPage extends Component {
      constructor(props){
@@ -24,6 +26,7 @@ class ChatPage extends Component {
         this.saveName=this.saveName.bind(this);
         this.saveMsg=this.saveMsg.bind(this);
         this.sendMsg=this.sendMsg.bind(this);
+        this.changePage=this.changePage.bind(this);
     }
     
     componentDidMount() {
@@ -31,6 +34,12 @@ class ChatPage extends Component {
     this.Clock = setInterval( () => this.GetTime(), 1000 );
  
   }
+    
+    changePage(bool){
+        this.setState({
+            mode:bool
+        })
+    }
     
     joinChat(){
         this.setState({
@@ -74,18 +83,18 @@ class ChatPage extends Component {
     date = new Date();
     hour = date.getHours(); 
  
-    if(hour <= 11)
-    {
- 
-      TimeType = 'AM';
- 
-    }
-    else{
- 
-      TimeType = 'PM';
- 
-    }
- 
+        if(hour <= 11)
+        {
+
+          TimeType = 'AM';
+
+        }
+        else{
+
+          TimeType = 'PM';
+
+        }
+
     if( hour > 12 )
     {
       hour = hour - 12;
@@ -145,9 +154,17 @@ class ChatPage extends Component {
             );
       }
       
+     
       
       else if(this.state.mode === 1){
-          
+        
+          var allUsers = this.state.allusers.map((obj, i)=>{
+          return(
+            <div key={i}>
+              {obj}
+              </div>
+          )
+      })
            var allmsgs = this.state.allmsgs.map((obj, i)=>{
                   return(
                   <div key={i} className="theMSG">
@@ -158,7 +175,15 @@ class ChatPage extends Component {
            
           comp = (
             <div className="chatBox">
+              <div className="onlineusers">
+                
+                <img src={exit} alt="exitarrow" className="exit" onClick={this.changePage.bind(this,2)}/>
               
+                Online: <hr/>
+                {allUsers}
+              
+
+            </div>
               <div className="chatDisplay">{allmsgs}</div>
                  
                 <div className="controls">  
@@ -169,24 +194,18 @@ class ChatPage extends Component {
               </div>
           )
       }
-      
-      var allUsers = this.state.allusers.map((obj, i)=>{
-          return(
-            <div key={i}>
-              {obj}
-              </div>
+      else if(this.state.mode === 2){
+          comp = (
+          <ChoosePage/>
           )
-      })
+      }
+      
+      
       
      
     return (
        <div className="chatApp">
    
-            <div className="onlineusers">
-                Online: <hr/>
-                {allUsers}
-            </div>
-        
            {comp}
        
         </div>
